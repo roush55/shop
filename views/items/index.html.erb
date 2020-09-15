@@ -1,0 +1,20 @@
+
+
+<div class="checkout">
+<div class="cartview">
+<h4 id="h">Your Order Summary</h4><hr>
+<% @carts.each do |cart| %>
+ 
+ 
+ <img src=<%=cart.item.image%> alt=""  width="200px" height="140px"/>
+ 
+ <p class ="cart">
+<%=cart.item.name%> Price:$<%=cart.item.price%><%=link_to "",item_cart_path(cart.item, cart),method: :delete ,class:"fa fa-trash"%>
+ </p>
+
+<% end %><br/>
+
+<hr/>
+<button class="bt">check out</button>
+</div>
+</div>

@@ -1,0 +1,20 @@
+
+ <div class="main" style="padding:5px;">
+            <div class="contact-us">
+<%= form_for @item,class:"form-group",url: {action: "update"} do |f| %>
+   <div class="form-group">
+    <%= f.label :name%>
+    <%= f.text_field :name,class:"form-control"%>
+    </div>
+     <div class="form-group">
+    <%= f.label :image%>
+    <%= f.text_field :image,class:"form-control"%>
+    </div>
+     <div class="form-group">
+    <%= f.label :price%>
+    <%= f.number_field :price,class:"form-control"%>
+  </div>
+    <%= f.submit "Update" ,class:"bt"%>
+<%end%>
+</div>
+</div>

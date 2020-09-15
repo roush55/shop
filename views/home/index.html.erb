@@ -1,0 +1,60 @@
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px;" id="home">
+  <img class="w3-image" src="https://images.pexels.com/photos/1343504/pexels-photo-1343504.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" width="1600px" height="800px">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge" style="color:white">Yara &&  Lara</h1>
+  </div>
+</header>
+<hr>
+<div class="container">
+<div class="w3-content" style="max-width:1100px">
+<div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <%=image_tag("y&l.jpg" ,alt:"Table Setting",id:"yl",class: "w3-round w3-image w3-opacity-min") %>
+    </div >
+
+   
+      <h1 class="w3-center">About Yara & Lara </h1><br>
+      <h5 class="w3-center"> since 2016</h5>
+      <p class="w3-large" > We believe that only the finest ingredients can deliver real moments of indulgence.<span class="w3-tag w3-light-grey"></span></p>
+      <p class="w3-large w3-text-grey w3-hide-medium"> We work with passion to provide the perfect iced treats </p>
+    </div>
+  </div>
+<hr>
+<div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Our Menu</h1>
+<% @items.each do |item| %>
+<%= link_to item, class: "postTitle" do%>
+  <h4>flavor <%=item.name%></h4>
+<%end%>
+
+
+<p class="w3-text-grey">Price: <%=item.price%>$</p>    
+<span>
+<button class="bt"><%= link_to "Add To Cart", new_item_cart_path(item)%></button></span>
+
+<%end%>
+<br/>
+<button class='bt'><%= link_to 'add new  ', new_item_path%></button>
+</div>
+
+ <div class="w3-col l6 w3-padding-large">
+      <img src="https://images.pexels.com/photos/1772114/pexels-photo-1772114.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:90%" id="ice">
+    </div>
+    
+</div>
+
+<hr/>
+ 
+
+</div>
+</div>
+
+<footer  class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+       <i class="fa fa-instagram w3-hover-opacity"></i>
+       <i class="fa fa-snapchat w3-hover-opacity"></i>
+       <i class="fa fa-twitter w3-hover-opacity"></i>
+        
+        <p class="w3-medium">Powered by <a href="RA" target="_blank">Ra</a> <i class="fa fa-twitter w3-hover-opacity"></i></p>
+      </footer>
